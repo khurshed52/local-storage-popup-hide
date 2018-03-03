@@ -1,0 +1,4 @@
+if(localStorage.getItem('popState') != 'shown'){
+      $('#yourmodalname').modal('show');
+      localStorage.setItem('popState','shown')
+  }
