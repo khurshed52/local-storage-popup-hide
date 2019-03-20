@@ -2,3 +2,17 @@ if(localStorage.getItem('popState') != 'shown'){
       $('#yourmodalname').modal('show');
       localStorage.setItem('popState','shown')
   }
+  
+  <!----color class save in local storage-->
+  
+  document.getElementById('try').addEventListener('click' , function(){
+		   if (localStorage.toggled != "contrast" ) {
+			$('body').toggleClass("contrast", true );
+			localStorage.toggled = "contrast";
+		 } else {
+			$('body').toggleClass("contrast", false );
+			localStorage.toggled = "";
+		 }
+});
+
+$('body').toggleClass(localStorage.toggled);
